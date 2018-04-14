@@ -5,10 +5,10 @@
         <!-- Customize your theme here. -->
 
         <!-- Primary theme color of the app (sets background color of app bar) -->
-        <item name="colorPrimary">#FF9800</item>
+        <item name="colorPrimary">#FFD740</item>
 
         <!-- Background color of buttons in the app -->
-        <item name="colorButtonNormal">#FF9800</item>
+        <item name="colorButtonNormal">#FFD740</item>
     </style>
 
 </resources>

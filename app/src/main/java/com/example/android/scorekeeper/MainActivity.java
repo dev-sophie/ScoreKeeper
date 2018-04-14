@@ -7,11 +7,17 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Tracks the score for Team A.
-    int scoreTeamA = 0;
+    // Tracks the goals for Team A.
+    int goalsTeamA = 0;
 
-    // Tracks the score for Team B.
-    int scoreTeamB = 0;
+    // Tracks the goals for Team B.
+    int goalsTeamB = 0;
+
+    // Tracks the fouls for Team A.
+    int foulsTeamA = 0;
+
+    // Tracks the fouls for Team B.
+    int foulsTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,76 +26,80 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Team A.
+     * Adds a goal for Team A when Button Goal is clicked for Team A.
      */
-    public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+    public void addGoalForTeamA(View view) {
+        goalsTeamA = goalsTeamA + 1;
+        displayGoalsForTeamA(goalsTeamA);
     }
 
     /**
-     * Displays the given score for Team B.
+     * Adds a goal for Team B when Button Goal is clicked for Team B.
      */
-    public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+    public void addGoalForTeamB(View view) {
+        goalsTeamB = goalsTeamB + 1;
+        displayGoalsForTeamB(goalsTeamB);
     }
 
     /**
-     * Resets the score for Team A and Team B.
+     * Adds a foul for Team A when Button Foul is clicked for Team A.
+     */
+    public void addFoulForTeamA(View view) {
+        foulsTeamA = foulsTeamA + 1;
+        displayFoulsForTeamA(foulsTeamA);
+    }
+
+    /**
+     * Adds a foul for Team B when Button Foul is clicked for Team B.
+     */
+    public void addFoulForTeamB(View view) {
+        foulsTeamB = foulsTeamB + 1;
+        displayFoulsForTeamB(foulsTeamB);
+    }
+
+    /**
+     * Resets the goals and fouls for both teams to zero.
      */
     public void resetScores(View view){
-        scoreTeamA = 0;
-        scoreTeamB = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        goalsTeamA = 0;
+        goalsTeamB = 0;
+        foulsTeamA = 0;
+        foulsTeamB = 0;
+        displayGoalsForTeamA(goalsTeamA);
+        displayGoalsForTeamB(goalsTeamB);
+        displayFoulsForTeamA(foulsTeamA);
+        displayFoulsForTeamB(foulsTeamB);
     }
 
     /**
-     * Execute when Button +3 Points is clicked for Team A.
+     * Displays the total goals for Team A.
      */
-    public void addThreePointsForTeamA(View view) {
-        scoreTeamA = scoreTeamA + 3;
-        displayForTeamA(scoreTeamA);
+    private void displayGoalsForTeamA(int goals) {
+        TextView goalsView = (TextView) findViewById(R.id.team_a_goals);
+        goalsView.setText(String.valueOf(goals));
     }
 
     /**
-     * Execute when Button +2 Points is clicked for Team A.
+     * Displays the total goals for Team B.
      */
-    public void addTwoPointsForTeamA(View view) {
-        scoreTeamA = scoreTeamA + 2;
-        displayForTeamA(scoreTeamA);
+    private void displayGoalsForTeamB(int goals) {
+        TextView goalsView = (TextView) findViewById(R.id.team_b_goals);
+        goalsView.setText(String.valueOf(goals));
     }
 
     /**
-     * Execute when Button Free Throw is clicked for Team A.
+     * Displays the total fouls for Team A.
      */
-    public void addOnePointForTeamA(View view) {
-        scoreTeamA = scoreTeamA + 1;
-        displayForTeamA(scoreTeamA);
+    private void displayFoulsForTeamA(int fouls) {
+        TextView foulsView = (TextView) findViewById(R.id.team_a_fouls);
+        foulsView.setText(String.valueOf(fouls));
     }
 
     /**
-     * Execute when Button +3 Points is clicked for Team B.
+     * Displays the total fouls for Team B.
      */
-    public void addThreePointsForTeamB(View view) {
-        scoreTeamB = scoreTeamB + 3;
-        displayForTeamB(scoreTeamB);
-    }
-
-    /**
-     * Execute when Button +2 Points is clicked for Team B.
-     */
-    public void addTwoPointsForTeamB(View view) {
-        scoreTeamB = scoreTeamB + 2;
-        displayForTeamB(scoreTeamB);
-    }
-
-    /**
-     * Execute when Button Free Throw is clicked for Team B.
-     */
-    public void addOnePointForTeamB(View view) {
-        scoreTeamB = scoreTeamB + 1;
-        displayForTeamB(scoreTeamB);
+    private void displayFoulsForTeamB(int fouls) {
+        TextView foulsView = (TextView) findViewById(R.id.team_b_fouls);
+        foulsView.setText(String.valueOf(fouls));
     }
 }

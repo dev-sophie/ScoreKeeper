@@ -31,7 +31,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/team_a_score"
+                android:id="@+id/team_a_goals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
@@ -44,22 +44,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:onClick="addThreePointsForTeamA"
-                android:text="+3 Points" />
+                android:onClick="addGoalForTeamA"
+                android:text="Goal" />
+
+            <TextView
+                android:id="@+id/team_a_fouls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="28sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:onClick="addTwoPointsForTeamA"
-                android:text="+2 Points" />
+                android:onClick="addFoulForTeamA"
+                android:text="Foul" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:onClick="addOnePointForTeamA"
-                android:text="Free Throw" />
         </LinearLayout>
 
         <View
@@ -85,7 +90,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/team_b_score"
+                android:id="@+id/team_b_goals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
@@ -98,22 +103,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:onClick="addThreePointsForTeamB"
-                android:text="+3 Points" />
+                android:onClick="addGoalForTeamB"
+                android:text="Goal" />
+
+            <TextView
+                android:id="@+id/team_b_fouls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="28sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:onClick="addTwoPointsForTeamB"
-                android:text="+2 Points" />
+                android:onClick="addFoulForTeamB"
+                android:text="Foul" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:onClick="addOnePointForTeamB"
-                android:text="Free Throw" />
         </LinearLayout>
     </LinearLayout>
 
