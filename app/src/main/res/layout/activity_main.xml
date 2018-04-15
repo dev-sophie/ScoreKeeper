@@ -26,7 +26,7 @@
                 android:layout_marginBottom="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:text="Team A"
+                android:text="@string/team_a"
                 android:textColor="#616161"
                 android:textSize="14sp" />
 
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:onClick="addGoalForTeamA"
-                android:text="Goal" />
+                android:text="@string/goal" />
 
             <TextView
                 android:id="@+id/team_a_fouls"
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:onClick="addFoulForTeamA"
-                android:text="Foul" />
+                android:text="@string/foul" />
 
         </LinearLayout>
 
@@ -85,7 +85,7 @@
                 android:layout_marginBottom="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:text="Team B"
+                android:text="@string/team_b"
                 android:textColor="#616161"
                 android:textSize="14sp" />
 
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:onClick="addGoalForTeamB"
-                android:text="Goal" />
+                android:text="@string/goal" />
 
             <TextView
                 android:id="@+id/team_b_fouls"
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:onClick="addFoulForTeamB"
-                android:text="Foul" />
+                android:text="@string/foul" />
 
         </LinearLayout>
     </LinearLayout>
@@ -133,6 +133,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="resetScores"
-        android:text="Reset" />
+        android:text="@string/reset" />
 
 </RelativeLayout>
